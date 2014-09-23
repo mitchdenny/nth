@@ -11,7 +11,7 @@ function Nth()
 	};
 
 	return {
-		convert: function(number)
+		appendSuffix: function(number)
 		{
 			if (number > 3 && number < 21) {
 				return util.format('%sth', number);
