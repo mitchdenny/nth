@@ -7,5 +7,13 @@
     "test": "grunt test"
   },
   "author": "Mitch Denny <mitch@mitchdenny.com> (http://mitchdenny.com/)",
-  "license": "ISC"
+  "license": "ISC",
+    "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-jsdoc": "^0.5.7",
+    "grunt-mocha-test": "^0.12.0",
+    "grunt-release": "^0.7.0",
+    "mocha": "^1.21.4"
+  }
 }
