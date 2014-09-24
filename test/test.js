@@ -1,5 +1,6 @@
 var nth = require('../index.js');
 var assert = require('assert');
+var chai = require('chai');
 
 describe('Nth', function(){
 	describe('#convert', function() {
@@ -102,6 +103,10 @@ describe('Nth', function(){
 		it('should convert 24 to 24th', function() {
 			var result = nth.appendSuffix(24);
 			assert.equal('24th', result);
+		});
+
+		it('should throw an error if something that is not a number is not passed in', function() {
+			chai.expect(function () { nth.appendSuffix('not a number'); }).to.throw();
 		});
 	});
 });

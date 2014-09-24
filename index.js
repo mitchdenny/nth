@@ -1,4 +1,5 @@
 var util = require('util');
+var validator = require('validator');
 
 function Nth()
 {
@@ -13,6 +14,11 @@ function Nth()
 	return {
 		appendSuffix: function(number)
 		{
+			if (validator.isInt(number) != true)
+			{
+				throw new 'Oh no';
+			}
+
 			if (number > 3 && number < 21) {
 				return util.format('%sth', number);
 			}
@@ -28,8 +34,6 @@ function Nth()
 			} else {
 				return util.format('%sth', number);
 			}
-
-			throw new 'Cannot convert number to an Nth string';
 		}
 	};
 }

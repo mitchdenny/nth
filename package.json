@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mitch Denny <mitch@mitchdenny.com> (http://mitchdenny.com/)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^3.19.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1"
+  }
 }
