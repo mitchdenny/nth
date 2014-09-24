@@ -6,8 +6,17 @@
   "scripts": {
     "test": "grunt test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mitchdenny/nth.git"
+  },
+
   "author": "Mitch Denny <mitch@mitchdenny.com> (http://mitchdenny.com/)",
-  "license": "ISC",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mitchdenny/nth"
+  },
+  "homepage": "https://github.com/mitchdenny/nth",
   "dependencies": {
     "validator": "^3.19.0"
   },
