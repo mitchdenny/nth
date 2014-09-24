@@ -32,6 +32,16 @@ module.exports = function(grunt) {
           destination: 'doc'
         }
       }
+    },
+    release: {
+      options: {
+        commitMessage: 'release <%= version %> [no ci]', //default: 'release <%= version %>'
+        github: { 
+          repo: 'mitchdenny/nth', //put your user/repo here
+          usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username 
+          passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
+        }
+      }
     }
   });
 
