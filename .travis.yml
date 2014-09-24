@@ -3,4 +3,4 @@ node_js:
   - 0.10
 
 after_success:
-  - grunt release
+  - echo ${GH_TOKEN}
