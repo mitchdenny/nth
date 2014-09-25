@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     },
     release: {
       options: {
-        commitMessage: 'release <%= version %> [no ci]', //default: 'release <%= version %>
+        commitMessage: 'release <%= version %> [no ci]' //default: 'release <%= version %>
         }
       }
     }
