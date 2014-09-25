@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - 0.1
+- 0.1
 after_success:
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "${GH_TOKEN}" > .git/credentials
-  - ls .git
-  - grunt release
+- git config credential.helper "store --file=.git/credentials"
+- echo "${GH_TOKEN}" > .git/credentials
+- git status
 env:
   global:
-  - secure: klkZkzWdzsH9ySps2H1G91zrajQqA3B6toC9J0YV2wkhujLvYBWOY8U9pmwUSBBjZcOUuTS2B6q6QmpWfNLoi35NfHJ2CwRlEatPydIiFQnDSey6xh91e6tB902UI3O9Eu7Gb0/oXg30AH51N7sJB0AmVnoEWfaK19zh2r3LXHI=
+    secure: GMcQGHolk3YewZ0228vAL9yfmMQw8I58ZBw0GIqRzJNkq5j55gI5oq1oIcZtprujn1dfs940aMcM0qZ1ahjE9Q3RsHNSHzokRBnXuG29flSS6IVG4qYo2QRQ4nxPfCDnnyB4EoSylC9PHfoU3xtLaNS6s7BdPq9bxAX1VZD38XY=
