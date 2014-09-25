@@ -11,6 +11,7 @@ before_script:
 script:
 - grunt test
 after_success:
+- git push
 - grunt release
 env:
   global:

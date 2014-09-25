@@ -35,11 +35,7 @@ module.exports = function(grunt) {
     },
     release: {
       options: {
-        commitMessage: 'release <%= version %> [no ci]', //default: 'release <%= version %>'
-        github: {
-          repo: 'mitchdenny/nth.git',
-          usernameVar: 'GH_TOKEN',
-          passwordVar: 'x-oath-basic'
+        commitMessage: 'release <%= version %> [no ci]', //default: 'release <%= version %>
         }
       }
     }
