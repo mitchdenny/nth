@@ -1,12 +1,13 @@
 language: node_js
-before_build:
-- git checkout master
 node_js:
 - 0.1
 after_success:
 - git config credential.helper "store --file=.git/credentials"
+- git status
+- git checkout master
 - echo "${GH_TOKEN}" > .git/credentials
 - git status
+- git push
 env:
   global:
     secure: GMcQGHolk3YewZ0228vAL9yfmMQw8I58ZBw0GIqRzJNkq5j55gI5oq1oIcZtprujn1dfs940aMcM0qZ1ahjE9Q3RsHNSHzokRBnXuG29flSS6IVG4qYo2QRQ4nxPfCDnnyB4EoSylC9PHfoU3xtLaNS6s7BdPq9bxAX1VZD38XY=
