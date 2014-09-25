@@ -4,11 +4,10 @@ node_js:
 before_script:
 - git config --global push.default simple
 - git config credential.helper "store --file=.git/credentials"
-- echo "${GH_TOKEN}" > .git/credentials
+- echo "https://${GH_TOKEN}:github.com" > .git/credentials
 - git remote remove origin
 - git remote add origin https://github.com/mitchdenny/nth.git
 - git checkout master
-
 script:
 - grunt test
 after_success:
