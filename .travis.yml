@@ -1,19 +1,5 @@
 language: node_js
 node_js:
 - 0.1
-before_script:
-- git config --global push.default simple
-- git config credential.helper "store --file=.git/credentials"
-- echo "https://${GH_TOKEN}:github.com" > .git/credentials
-- git remote remove origin
-- git remote add origin https://github.com/mitchdenny/nth.git
-- git checkout master
-- git branch --set-upstream-to=origin/master
 script:
 - grunt test
-after_success:
-- git push
-- grunt release
-env:
-  global:
-    secure: GMcQGHolk3YewZ0228vAL9yfmMQw8I58ZBw0GIqRzJNkq5j55gI5oq1oIcZtprujn1dfs940aMcM0qZ1ahjE9Q3RsHNSHzokRBnXuG29flSS6IVG4qYo2QRQ4nxPfCDnnyB4EoSylC9PHfoU3xtLaNS6s7BdPq9bxAX1VZD38XY=
