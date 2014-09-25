@@ -4,11 +4,7 @@ node_js:
 after_success:
 - git config --global user.email "mitch@mitchdenny.com"
 - git config --global user.name "Mitch Denny"
-- git config credential.helper "store --file=.git/credentials"
-- echo $FOO
-- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 - grunt release
 env:
   global:
   - secure: klkZkzWdzsH9ySps2H1G91zrajQqA3B6toC9J0YV2wkhujLvYBWOY8U9pmwUSBBjZcOUuTS2B6q6QmpWfNLoi35NfHJ2CwRlEatPydIiFQnDSey6xh91e6tB902UI3O9Eu7Gb0/oXg30AH51N7sJB0AmVnoEWfaK19zh2r3LXHI=
-  - secure: bmzNiJ1okCLM/kWuR7DFekCGe22r52jNGMLIi3vfyfwK9ghK1PhdXfD8R/Yv8ORDZLrq3OH8Mj4mptwkg5tgKgn80Bn3UdxxushmHhXBI4l9kUlg6/sb3SmjVTkrzUhVajoKHTaZELhwFbCMTeMSOOYLQQimn0wc988muu3zBWU=
