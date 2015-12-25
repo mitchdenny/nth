@@ -135,6 +135,26 @@ describe('Nth', function(){
 			assert.equal('113th', result);
 		});
 
+		it('should convert -1 to -1st', function() {
+			var result = nth.appendSuffix(-1);
+			assert.equal('-1st', result);
+		});
+
+		it('should convert -2 to -2nd', function() {
+			var result = nth.appendSuffix(-2);
+			assert.equal('-2nd', result);
+		});
+
+		it('should convert -3 to -3rd', function() {
+			var result = nth.appendSuffix(-3);
+			assert.equal('-3rd', result);
+		});
+
+		it('should convert -4 to -4th', function() {
+			var result = nth.appendSuffix(-4);
+			assert.equal('-4th', result);
+		});
+
 		it('should throw an error if something that is not a number is not passed in', function() {
 			chai.expect(function () { nth.appendSuffix('not a number'); }).to.throw();
 		});
