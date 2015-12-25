@@ -1,41 +1,27 @@
 var util = require('util');
 var validator = require('validator');
 
-function Nth()
-{
-	var that = this;
-	that.getLastDigit = function(number)
-	{
-		var numberAsString = number.toString();
-		var lastDigit = numberAsString[numberAsString.length - 1];
-		return lastDigit;
-	};
-
-	return {
-		appendSuffix: function(number)
+module.exports = {
+	appendSuffix: function(number){
+		if (validator.isInt(number) != true)
 		{
-			if (validator.isInt(number) != true)
-			{
-				throw new 'Oh no';
-			}
+			throw new 'Oh no';
+		}
 
-			if (number > 3 && number < 21) {
-				return util.format('%sth', number);
-			}
+		var digits = Math.abs(number).toString().split('').reverse();
 
-			var lastDigit = that.getLastDigit(number);
-
-			if (lastDigit == '1') {
+		if(digits.length > 1 && digits[1] == 1){
+			return util.format('%sth', number);
+		}else{
+			if(digits[0] == 1){
 				return util.format('%sst', number);
-			} else if (lastDigit == '2') {
+			}else if(digits[0] == 2){
 				return util.format('%snd', number);
-			} else if (lastDigit == '3') {
+			}else if(digits[0] == 3){
 				return util.format('%srd', number);
-			} else {
+			}else{
 				return util.format('%sth', number);
 			}
 		}
-	};
-}
-
-module.exports = new Nth();
+	}
+};
