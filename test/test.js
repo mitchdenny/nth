@@ -312,5 +312,8 @@ describe('Nth', function(){
 		it('should throw an error if something that is not a number is not passed in', function() {
 			chai.expect(function () { nth.getSuffix('not a number'); }).to.throw();
 		});
+		it('should throw an error if not an integer is passed in', function() {
+			chai.expect(function () { nth.getSuffix(1.234); }).to.throw();
+		});
 	});
 });

@@ -1,8 +1,9 @@
-var validator = require('validator');
-
+function isInt(value) {
+	return typeof value === "number" && isFinite(value) && Math.floor(value) === value;
+}
 
 function getSuffix(number) {
-	if (validator.isInt(number) != true)
+	if (isInt(number) != true)
 	{
 		throw new 'Oh no';
 	}
