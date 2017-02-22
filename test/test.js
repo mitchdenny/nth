@@ -21,7 +21,6 @@ describe('Nth', function(){
 
 		it('should convert 4 to 4th', function() {
 			var result = nth.appendSuffix(4);
-			console.log('returned %s', result);
 			assert.equal('4th', result);
 		});
 
