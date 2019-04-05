@@ -4,7 +4,7 @@
   "description": "The nth package simply takes a number and returns the same number with the appropriate placing string. For example the number 1 becomes 1st, and the number 2 becomes 2nd.",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
