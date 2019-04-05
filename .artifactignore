@@ -1,8 +1,8 @@
-**/*
 .git
 .gitignore
 .npmignore
-!package.json
-!index.json
-!README.md
-!LICENSE
+git2semver.config.js
+node_modules
+test
+package-lock.json
+azure-pipelines.yml
