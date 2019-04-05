@@ -1,4 +1,4 @@
-doc/
-test/
-Gruntfile.js
-.git*
+**/*
+!index.js
+!README.md
+!LICENSE
