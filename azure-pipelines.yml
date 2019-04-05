@@ -1,0 +1,29 @@
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+- script: |
+    set -e
+    npm audit
+    npm ci
+  displayName: 'Install packages'
+- script: |
+    set -e
+    npm test
+  displayName: 'Run tests'
+- script: |
+    set -e
+    npx -q git2semver@0.7.1
+  displayName: 'Generate version number'
+- script: |
+    npm version $BUILD_BUILDNUMBER --no-git-tag-version
+  displayName: 'Stamp package version'
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: package
+    targetPath: $(Build.SourcesDirectory)
+  displayName: 'Store package for deployment'
