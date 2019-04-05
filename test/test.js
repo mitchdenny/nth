@@ -21,7 +21,6 @@ describe('Nth', function(){
 
 		it('should convert 4 to 4th', function() {
 			var result = nth.appendSuffix(4);
-			console.log('returned %s', result);
 			assert.equal('4th', result);
 		});
 
@@ -157,6 +156,164 @@ describe('Nth', function(){
 
 		it('should throw an error if something that is not a number is not passed in', function() {
 			chai.expect(function () { nth.appendSuffix('not a number'); }).to.throw();
+		});
+	});
+	describe('#convert', function() {
+		it('should get st for 1', function() {
+			var result = nth.getSuffix(1);
+			assert.equal('st', result);
+		});
+
+		it('should get nd for 2', function() {
+			var result = nth.getSuffix(2);
+			assert.equal('nd', result);
+		});
+
+		it('should get rd for 3', function() {
+			var result = nth.getSuffix(3);
+			assert.equal('rd', result);
+		});
+
+		it('should get th for 4', function() {
+			var result = nth.getSuffix(4);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 5', function() {
+			var result = nth.getSuffix(5);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 10', function() {
+			var result = nth.getSuffix(10);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 11', function() {
+			var result = nth.getSuffix(11);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 12', function() {
+			var result = nth.getSuffix(12);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 13', function() {
+			var result = nth.getSuffix(13);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 14', function() {
+			var result = nth.getSuffix(14);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 15', function() {
+			var result = nth.getSuffix(15);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 16', function() {
+			var result = nth.getSuffix(16);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 17', function() {
+			var result = nth.getSuffix(17);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 18', function() {
+			var result = nth.getSuffix(18);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 19', function() {
+			var result = nth.getSuffix(19);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 20', function() {
+			var result = nth.getSuffix(20);
+			assert.equal('th', result);
+		});
+
+		it('should get st for 21', function() {
+			var result = nth.getSuffix(21);
+			assert.equal('st', result);
+		});
+
+		it('should get nd for 22', function() {
+			var result = nth.getSuffix(22);
+			assert.equal('nd', result);
+		});
+
+		it('should get rd for 23', function() {
+			var result = nth.getSuffix(23);
+			assert.equal('rd', result);
+		});
+
+		it('should get th for 24', function() {
+			var result = nth.getSuffix(24);
+			assert.equal('th', result);
+		});
+
+		it('should get st for 101', function() {
+			var result = nth.getSuffix(101);
+			assert.equal('st', result);
+		});
+
+		it('should get nd for 102', function() {
+			var result = nth.getSuffix(102);
+			assert.equal('nd', result);
+		});
+
+		it('should get rd for 103', function() {
+			var result = nth.getSuffix(103);
+			assert.equal('rd', result);
+		});
+
+		it('should get th for 111', function() {
+			var result = nth.getSuffix(111);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 112', function() {
+			var result = nth.getSuffix(112);
+			assert.equal('th', result);
+		});
+
+		it('should get th for 113', function() {
+			var result = nth.getSuffix(113);
+			assert.equal('th', result);
+		});
+
+		it('should get st for -1', function() {
+			var result = nth.getSuffix(-1);
+			assert.equal('st', result);
+		});
+
+		it('should get nd for -2', function() {
+			var result = nth.getSuffix(-2);
+			assert.equal('nd', result);
+		});
+
+		it('should get rd for -3', function() {
+			var result = nth.getSuffix(-3);
+			assert.equal('rd', result);
+		});
+
+		it('should get th for -4', function() {
+			var result = nth.getSuffix(-4);
+			assert.equal('th', result);
+		});
+
+		it('should throw an error if something that is not a number is not passed in', function() {
+			chai.expect(function () { nth.getSuffix('not a number'); }).to.throw();
+		});
+		it('should throw an error if not an integer is passed in', function() {
+			chai.expect(function () { nth.getSuffix(1.234); }).to.throw();
 		});
 	});
 });

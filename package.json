@@ -16,9 +16,7 @@
     "url": "https://github.com/mitchdenny/nth"
   },
   "homepage": "https://github.com/mitchdenny/nth",
-  "dependencies": {
-    "validator": "^3.19.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^1.9.1",
     "grunt": "^0.4.5",
