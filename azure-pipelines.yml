@@ -19,7 +19,7 @@ steps:
     npx -q git2semver@0.7.1
   displayName: 'Generate version number'
 - script: |
-    npm version $BUILD_BUILDNUMBER --no-git-tag-version
+    npm version $BUILD_BUILDNUMBER --no-git-tag-version --allow-same-version
   displayName: 'Stamp package version'
 - task: PublishPipelineArtifact@0
   inputs:
