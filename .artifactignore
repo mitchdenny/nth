@@ -1,4 +1,7 @@
 **/*
+.git
+.gitignore
+.npmignore
 !package.json
 !index.json
 !README.md
