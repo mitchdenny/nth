@@ -8,7 +8,6 @@ steps:
   displayName: 'Install Node.js'
 - script: |
     set -e
-    npm audit
     npm ci
   displayName: 'Install packages'
 - script: |
