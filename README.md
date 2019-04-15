@@ -24,7 +24,15 @@ Once the package is downloaded and installed, you just need to require in the mo
 ```js
 var nth = require('nth');
 var output = nth.appendSuffix(23);
-console.log(output); // 23rd
+console.log(output); // outputs: '23rd'
+```
+
+If you just want to get the suffix itself (without the number) then you can call the `getSuffix` method.
+
+```js
+var nth = require('nth');
+var output = nth.getSuffix(23);
+console.log(output); // outputs: 'rd'
 ```
 
 Contributions
