@@ -1,9 +1,0 @@
-.artifactignore
-.git
-.gitignore
-.npmignore
-git2semver.config.js
-node_modules
-test
-package-lock.json
-azure-pipelines.yml
