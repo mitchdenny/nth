@@ -26,6 +26,7 @@ RUN rm -rf /opt/yarn-* \
     
 # Install eslint
 RUN npm install -g eslint
+RUN npm install -g npm
 
 # Clean up
 RUN apt-get autoremove -y \
